@@ -1,5 +1,6 @@
 # Marginal Valera
 
+![Unit Tests & Lint](https://github.com/Napwob/Valera/workflows/Unit%20Tests%20&%20Lint/badge.svg)
 
 ## Install
 
