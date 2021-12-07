@@ -1,2 +1,2 @@
-require_relative './lib/application.rb'
+require_relative './lib/application'
 Application.new.run
