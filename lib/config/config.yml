@@ -4,7 +4,7 @@ initial:
     value: 100
   -
     parameter: happiness
-    value: 10
+    value: 5
   -
     parameter: fatigue
     value: 0

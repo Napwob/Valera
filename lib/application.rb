@@ -12,6 +12,7 @@ class Application
   end
 
   def run
+    system 'clear'
     character = ValeraInit.new
     ConfigLoader.new(character, @actions).load_configuration
     actions_pool = ActionsPool.new(@actions)

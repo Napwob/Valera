@@ -17,8 +17,9 @@ class Game
       end
       other_actions(value)
     end
-    GameMenu.new(@character, @actions_pool)
-    IOAdapter.instance.output "\x1B[31m \nВалера помер :-( \x1B[0m \n"
+    # GameMenu.new(@character, @actions_pool)
+    after_death_menu
+    # IOAdapter.instance.output "\x1B[31m \nВалера помер :-( \x1B[0m \n"
   end
 
   def other_actions(value)  
@@ -32,6 +33,31 @@ class Game
     when 'exit'
       IOAdapter.instance.output 'Увидимся!'
       exit
+    end
+  end
+
+  def after_death_menu
+    system 'clear'
+    IOAdapter.instance.output "\x1B[31m \nВалера помер :'-( \x1B[0m \n"
+    IOAdapter.instance.output '[new game] [load] [exit]'
+    value = IOAdapter.instance.input 'Что делать будем?: '
+    death_actions(value)
+  end
+
+  def death_actions(value)
+    case value
+    when 'new game'
+      @character = ValeraInit.new
+      game_run
+    when 'load'
+      SaveOrLoad.new.load(@character)
+      IOAdapter.instance.output 'Загрузка завершена.'
+      game_run
+    when 'exit'
+      IOAdapter.instance.output 'Увидимся!'
+      exit
+    else
+      after_death_menu
     end
   end
 end
