@@ -15,9 +15,6 @@ RSpec.describe Game do
       context 'when save' do
         it { expect(game.other_actions('save')).to be_nil }
       end
-      context 'when exit' do
-        # it { expect(game.other_actions('exit')).to be_truthy }
-      end
     end
     context 'when input is incorrect' do
       it { expect(game.other_actions('o')).to be_falsey }

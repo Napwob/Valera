@@ -14,11 +14,11 @@ class GameMenu
     IOAdapter.instance.output '[save] [load] [exit]'
   end
 
-  def print_happines(name, count)
+  def print_happines(_name, count)
     if count >= 0
-      IOAdapter.instance.output "[#{name}]:|#{'█' * count.abs}#{' ' * (10 - count.abs)}|" 
+      IOAdapter.instance.output "[happiness]:|#{'█' * count.abs}#{' ' * (10 - count.abs)}|" 
     else
-      IOAdapter.instance.output "[#{name}]:|#{'#' * count.abs}#{' ' * (10 - count.abs)}|" 
+      IOAdapter.instance.output "[happiness]:|#{'#' * count.abs}#{' ' * (10 - count.abs)}|" 
     end
   end  
  
@@ -28,7 +28,7 @@ class GameMenu
     when 'money'
       IOAdapter.instance.output "[#{name}]: #{count}"
     when 'happiness'
-      print_happines(name, count) 
+      print_happines(count) 
     else
       procentcount = (count / 10).ceil
       IOAdapter.instance.output "[#{name}]:|#{'█' * procentcount}#{' ' * (10 - procentcount)}|" 
