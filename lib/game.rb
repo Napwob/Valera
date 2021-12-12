@@ -17,10 +17,8 @@ class Game
       end
       other_actions(value)
     end
-    # GameMenu.new(@character, @actions_pool)
     after_death_menu
     game_run
-    # IOAdapter.instance.output "\x1B[31m \nВалера помер :-( \x1B[0m \n"
   end
 
   def other_actions(value)  
