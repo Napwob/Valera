@@ -40,7 +40,7 @@ class Game
   def after_death_menu
     # system 'clear'
     IOAdapter.instance.output "\x1B[31m \nВалера помер :'-( \x1B[0m \n"
-    IOAdapter.instance.output '[new game] [load] [menu] [exit] \n'
+    IOAdapter.instance.output '[new game] [load] [menu] [exit]'
     value = IOAdapter.instance.input 'Что делать будем?: '
     case value
     when 'new game'

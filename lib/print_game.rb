@@ -14,7 +14,7 @@ class GameMenu
     IOAdapter.instance.output '[save] [load] [exit]'
   end
 
-  def print_happines(_name, count)
+  def print_happines(count)
     if count >= 0
       IOAdapter.instance.output "[happiness]:|#{'█' * count.abs}#{' ' * (10 - count.abs)}|" 
     else
