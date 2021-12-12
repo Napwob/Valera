@@ -18,7 +18,7 @@ class GameMenu
     if count >= 0
       IOAdapter.instance.output "[happiness]:|#{'█' * count.abs}#{' ' * (10 - count.abs)}|" 
     else
-      IOAdapter.instance.output "[happiness]:|#{'#' * count.abs}#{' ' * (10 - count.abs)}|" 
+      IOAdapter.instance.output "[sadness]:|#{'#' * count.abs}#{' ' * (10 - count.abs)}|" 
     end
   end  
  
