@@ -8,7 +8,7 @@ describe ConfigLoader do
   let(:data) { subject.load_configuration }
 
   describe '#load_configuration' do
-    context 'when config file is not empty' do
+    context 'when the configuration file is not empty' do
       it { expect(subject.load_configuration).to_not eq([]) }
     end
   end

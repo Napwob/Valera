@@ -11,13 +11,13 @@ describe Action do
   subject { Action.new name: 'test', conds: cond, effects: eff }
 
   describe '#valid?' do
-    context 'when the conds is valid' do
+    context 'when the condition is valid' do
       it { expect(subject.valid?(character)).to be_truthy }
     end
   end
 
   describe '#execute' do
-    context 'when health should be increased by 5' do
+    context 'when health increases by 5' do
       it { expect(subject.execute(character)).to eq([45]) }
     end
   end
